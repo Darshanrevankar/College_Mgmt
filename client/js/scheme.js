@@ -173,7 +173,7 @@ async function fetchSchemeData() {
         updateSchemaButton.innerText = 'Loading...';
         updateSchemaButton.disabled = true;
 
-        const response = await fetch(`http://localhost:5000/api/v1/admin/getScheme?year=${schemeYear}`);
+        const response = await fetch(`https://college-mgmt.onrender.com/api/v1/admin/getScheme?year=${schemeYear}`);
         const data = await response.json();
 
         if (response.ok && data.success && data.payload.schemes.length > 0) {
@@ -222,8 +222,8 @@ async function handleSubmit() {
     console.log('Submitting schema:', schema.id);
 
     const url = schema.id
-        ? 'http://localhost:5000/api/v1/admin/updateScheme' 
-        : 'http://localhost:5000/api/v1/admin/addScheme'; 
+        ? 'https://college-mgmt.onrender.com/api/v1/admin/updateScheme' 
+        : 'https://college-mgmt.onrender.com/api/v1/admin/addScheme'; 
 
     const method = schema.id ? 'PUT' : 'POST';
 

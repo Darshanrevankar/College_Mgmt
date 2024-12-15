@@ -2,7 +2,7 @@ let currentStudentId = null;  // To store the ID of the currently selected stude
 
 async function fetchData() {
     try {
-        const response = await fetch('http://localhost:5000/api/v1/admin/getScheme');
+        const response = await fetch('https://college-mgmt.onrender.com/api/v1/admin/getScheme');
         if (response.ok) {
             const data = await response.json();
             if (data.success) {
@@ -94,7 +94,7 @@ async function filterData() {
 
     if (selectedScheme && selectedBranch && selectedSemester && selectedSubject) {
         try {
-            const response = await fetch(`http://localhost:5000/api/v1/admin/getAllStudentsDetails?scheme=${selectedScheme}&branch=${selectedBranch}&semester=${selectedSemester}&subject=${selectedSubject}`);
+            const response = await fetch(`https://college-mgmt.onrender.com/api/v1/admin/getAllStudentsDetails?scheme=${selectedScheme}&branch=${selectedBranch}&semester=${selectedSemester}&subject=${selectedSubject}`);
             const data = await response.json();
 
             if (data.success) {
@@ -219,7 +219,7 @@ async function saveMarks(studentId, subjectId, subjectName, button) {
 
     try {
         // Send the updated data to the backend
-        const response = await fetch('http://localhost:5000/api/v1/user/academics/addMarks', {
+        const response = await fetch('https://college-mgmt.onrender.com/api/v1/user/academics/addMarks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

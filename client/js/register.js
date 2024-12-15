@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const signupForm = document.getElementById("signupForm");
     const responseMessage = document.querySelector(".response-message");
-    const API_BASE_URL = 'http://localhost:5000/api/v1/main';
+    const API_BASE_URL = 'https://college-mgmt.onrender.com/api/v1/main';
 
     const showMessage = (message, isError = false) => {
         responseMessage.textContent = message;

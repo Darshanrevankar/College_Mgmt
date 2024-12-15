@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000/api/v1/admin/getAllStudentsDetails";
+const apiUrl = "https://college-mgmt.onrender.com/api/v1/admin/getAllStudentsDetails";
     let studentsData = [];
 
     // Fetch Student Data
@@ -20,7 +20,7 @@ const apiUrl = "http://localhost:5000/api/v1/admin/getAllStudentsDetails";
     // Populate dropdowns with fetched data
     async function populateDropdowns() {
         try {
-            const schemesResponse = await fetch("http://localhost:5000/api/v1/admin/getScheme");
+            const schemesResponse = await fetch("https://college-mgmt.onrender.com/api/v1/admin/getScheme");
             const schemesData = await schemesResponse.json();
 
             if (schemesData.success) {
