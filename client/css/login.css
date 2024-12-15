@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+nav {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+label.logo {
+    color: rgb(20, 32, 210);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: rgb(14, 12, 12);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li .login-btn {
+    background: #186bf9;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li .login-btn:hover {
+    background: #4d12f0;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    color: white;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 22px;
+    color: rgb(4, 4, 4);
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#checker {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    label.logo {
+        padding-left: 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 890px) {
+    .checkbtn {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 22px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.936);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #checker:checked~ul {
+        left: 0;
+    }
+}
+
+
+
+
+.container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.container .registration {
+    display: none;
+}
+
+#check:checked~.registration {
+    display: block;
+}
+
+#check:checked~.login {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.container .form {
+    padding: 2rem;
+}
+
+.form header {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.3rem;
+}
+
+.input-group select,
+.input-group input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    color: #000;
+    padding: 0 15px;
+    background: transparent;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+}
+
+.input-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M2 3l3 3 3-3H2z" fill="%23666"/></svg>') no-repeat right 15px center;
+    background-size: 12px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #666;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    padding: 0 5px;
+    color: #6e0cd6;
+}
+
+.form a {
+    font-size: 14px;
+    padding: 0 5px;
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form input.button {
+    padding: 0 15px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    background: #186bf9;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.form input.button:hover {
+    background: #11346f;
+}
+
+.signup {
+    font-size: 14px;
+    text-align: center;
+}
+
+.signup label {
+    color: #4c4d4d;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.label{
+    color: gray;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+label:hover {
+    text-decoration: underline;
+}
+
+
+.signup label:hover {
+    text-decoration: underline;
+}
+
+.response-message {
+    text-align: center;
+    color: #6e0cd6;
+    margin-top: 1rem;
+}
+
+.response-message p {
+    margin: 0;
+}
+
+.response-message .error-message {
+    color: #e74c3c;
+}
+
+.response-message .success-message {
+    color: #2ecc71;
+}

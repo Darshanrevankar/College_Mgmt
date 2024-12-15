@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMetrics</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="checker">
+        <label for="checker" class="checkbtn"><i class="fas fa-bars"></i></label>
+        <label class="logo"><i class="fab fa-slack"></i> LearnMetrics</label>
+        <ul class="ul">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a class="login-btn" href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <input type="checkbox" id="check">
+
+        <div class="login form">
+            <header>Admin Login</header>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" name="loginEmail" required>
+                    <label for="loginEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <label class="label" for="check" class="signup">Forgot password?</label>
+                <input type="submit" class="button" value="Login">
+            </form>
+            
+        </div>
+
+        <div class="registration form">
+            <header>Change Password</header>
+            <form id="signupForm">
+               
+                <div class="input-group">
+                    <input type="email" name="signupEmail" required>
+                    <label for="signupEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="signupId" required>
+                    <label for="signupKey">Key</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="signupPassword" required>
+                    <label for="signupPassword">New Password</label>
+                </div>
+                
+                <input type="submit" class="button" value="Submit">
+            </form>
+            <div class="signup">
+                <span>Already have an account? <label for="check">Login</label></span>
+            </div>
+        </div>
+        <div class="response-message"></div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

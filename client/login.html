@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMetrics</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <input type="checkbox" id="checker">
+        <label for="checker" class="checkbtn"><i class="fas fa-bars"></i></label>
+        <label class="logo"><i class="fab fa-slack"></i> LearnMetrics</label>
+        <ul class="ul">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a class="login-btn" href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login & Signup Container -->
+    <div class="container">
+        <input type="checkbox" id="check">
+
+        <!-- Login Form -->
+        <div class="login form">
+            <header>Login</header>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" name="loginEmail" required>
+                    <label for="loginEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <a href="#">Forgot password?</a>
+                <input type="submit" class="button" value="Login">
+            </form>
+            <div class="signup">
+                <span>Don't have an account? <label for="check">Signup</label></span>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="registration form">
+            <header>Signup</header>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" name="signupName" required>
+                    <label for="signupName">Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="signupEmail" required>
+                    <label for="signupEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="signupId" required>
+                    <label for="signupId">USN</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="signupPassword" required>
+                    <label for="signupPassword">Password</label>
+                </div>
+                <div class="input-group">
+                    <select name="signupBranch" required>
+                        <option value="" disabled selected>Select your Branch</option>
+                        <option value="Computer Science and Engineering">Computer Science</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="CIV">Civil Engineering</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="signupScheme" required>
+                    <label for="signupScheme">Scheme</label>
+                </div>
+                <input type="submit" class="button" value="Signup">
+            </form>
+            <div class="signup">
+                <span>Already have an account? <label for="check">Login</label></span>
+            </div>
+        </div>
+        <div class="response-message"></div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

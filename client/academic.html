@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/academic.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Student</title>
+</head>
+<body>
+    <div class="total_container">
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-user-graduate icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>Total Exams</h2>
+        </div>
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-user-graduate icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>Pass</h2>
+        </div>
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-user-graduate icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>Fail</h2>
+        </div>
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-award icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>CGPA</h2>
+        </div>
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-times-circle icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>SGPA</h2>
+        </div>
+        <div class="total_card">
+            <div class="img">
+                <i class="fas fa-chart-line icon" aria-hidden="true"></i>
+                <h1>0</h1>
+            </div>
+            <h2>Average Percentage</h2>
+        </div>
+    </div>
+    <div class="controls">
+        <select id="semester">
+            <option value="" disabled selected>Semester</option>
+            <option value="1 Physics Cycle">1 Physics Cycle</option>
+            <option value="2 Chemistry Cycle">2 Chemistry Cycle</option>
+            <option value="1 Chemistry Cycle">1 Chemistry Cycle</option>
+            <option value="2 Physics Cycle">2 Physics Cycle</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+    </div>
+    <div class="table-container" id="students-container"></div>
+    <script src="js/academic.js"></script>
+</body>
+</html>

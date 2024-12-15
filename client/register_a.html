@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMetrics</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form id="signupForm" class="login form">
+            <header>Register</header>
+            <div class="input-group">
+                <input type="text" name="signupName" required>
+                <label for="signupName">Name</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="signupId" required>
+                <label for="signupId">ID</label>
+            </div>
+            <div class="input-group">
+                <input type="email" name="signupEmail" required>
+                <label for="signupEmail">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="signupPassword" required>
+                <label for="signupPassword">Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="signupScheme" required>
+                <label for="signupScheme">Key</label>
+            </div>
+            <input type="submit" class="button" value="Signup">
+        </form>
+        <div class="signup">
+            <a href="main.html">Don't have an account? <label>Dashboard</label></a>
+        </div>
+        <div class="response-message"></div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/upload.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets\7805099.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">LearnEase</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+            <i class='bx bx-list-ul toggle' id="bar"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="main.html">
+                            <i class='bx bx-home-alt icon' style="font-weight: 200;"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="upload.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Upload PDF</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="update.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Data</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="scheme.html">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Schema</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="topper.html">
+                            <i class='bx bx-medal icon'></i>
+                            <span class="text nav-text">Topper</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="img">
+            <img src="assets/7805099.jpg" class="user-pic">
+        </div>
+        <div class="sub-menu-wrap open">
+            <div class="sub-menu">
+                <li class="nav-link">
+                    <a href="register_a.html">
+                        <i class='bx bx-user icon'
+                            style="font-weight: lighter; padding-right: 5px; font-size: 16px;"></i>
+                        <span class="text">Register</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="main.html">
+                        <i class='bx bx-home-alt icon'
+                            style="font-weight: lighter; padding-right: 5px; font-size: 16px;"></i>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-cog icon'
+                            style="font-weight: lighter; padding-right: 5px; font-size: 16px;"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'
+                            style="font-weight: lighter; padding-right: 5px; font-size: 16px;"></i>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="upload-container">
+        <label for="semesterDropdown">Select Semester:</label>
+        <select id="semesterDropdown">
+            <option value="" disabled selected>Select semester</option>
+            <option value="1 Physics Cycle">1 Physics Cycle</option>
+            <option value="2 Chemistry Cycle">2 Chemistry Cycle</option>
+            <option value="1 Chemistry Cycle">1 Chemistry Cycle</option>
+            <option value="2 Physics Cycle">2 Physics Cycle</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <label for="getusn">USN:</label>
+        <input type="text" id="getusn" placeholder="Enter your USN" />
+        <h1>PDF to Image Uploader</h1>
+        <div class="upload-area" id="dropZone">
+            <p>Drag & Drop your PDF here or click to select</p>
+            <input type="file" id="fileInput" accept=".pdf" />
+        </div>
+        <div id="status" class="status" style="display: none;"></div>
+        <img id="preview" style="display: none;" />
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+
+</body>
+
+</html>
